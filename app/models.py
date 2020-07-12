@@ -7,11 +7,13 @@ class Sala(models.Model):
     def __str__(self):
 	    return self.name
 
+
 class Category(models.Model):
     name = models.CharField(max_length=20)
 
     def __str__(self):
 	    return self.name
+
 
 class Item(models.Model):
 	sala = models.ForeignKey(Sala, on_delete=models.CASCADE)
